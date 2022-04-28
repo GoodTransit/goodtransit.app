@@ -1,37 +1,110 @@
 <!doctype html>
 <html lang="en">
-    <head>
-		<title>GoodTransit App</title>
-		
-		<meta name="description" content="GoodTransit is your all-in-one transport partner for city living">
-		<meta name="keywords" content="goodtransit transportation app application transport subway city cities bus ferry">
-		
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-		
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="white">
-		
-		<link rel="canonical" href="http://goodtransit.app/">
 
-		<link rel="preconnect" href="https://fonts.googleapis.com"> 
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-		<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&display=swap" rel="stylesheet">
-	</head>
-	<body style="margin:0">
-		<nav style="position:fixed;left:0;top:0;right:0;padding:10px;background:white;text-align:center">
-			<p> 
-				<span style="float:left;padding-left:15px"><a style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:blue;text-decoration:none;border-bottom:3px solid blue">GoodTransit</a></span>
-				<span style="float:right;padding-right:15px"><a href="https://download.goodtransit.app" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:blue;text-decoration:none" onMouseOver="this.style.borderBottom='3px solid blue'" onMouseOut="this.style.borderBottom='none'">Download</a></span>
-				<span style="float:right;padding-right:15px"><a href="/whitepaper" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:blue;text-decoration:none" onMouseOver="this.style.borderBottom='3px solid blue'" onMouseOut="this.style.borderBottom='none'">White Paper</a></span>
-				<span style="float:right;padding-right:15px"><a href="/investors" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:blue;text-decoration:none" onMouseOver="this.style.borderBottom='3px solid blue'" onMouseOut="this.style.borderBottom='none'">Investors</a></span>
-				<br>
-			</p>
-		</nav>
+<head>
+	<title>GoodTransit App</title>
 
-		<div style="background:blue;height:100vh;margin:0;text-align:center">
-			<h1 style="padding-top:100px;color:white;font-size: 60px;text-align:left;margin-left:40px;margin-right:40px;font-weight:bold;font-family:'Zilla Slab',serif;max-width:800px">GoodTransit is your all-in-one transport partner for city living</h1>
-			<p style="position:fixed;bottom:40px;left:40px"><a href="https://download.goodtransit.app" style="padding:10px;background:white;font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:blue;text-decoration:none" onMouseOver="this.style.color='white';this.style.background='black'" onMouseOut="this.style.color='blue';this.style.background='white'">join download waitlist</a></p>
-		</div>
-	</body>
+	<meta name="description" content="GoodTransit is your all-in-one transport partner for city living">
+	<meta name="keywords" content="goodtransit transportation app application transport subway city cities bus ferry">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+	<link rel="canonical" href="http://goodtransit.app/">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body style="margin:0">
+	<nav style="position:fixed;left:0;top:0;right:0;padding:10px;background:white;text-align:center">
+		<p>
+			<span style="float:left;padding-left:15px"><a style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:blue;text-decoration:none;border-bottom:3px solid blue">GoodTransit</a></span>
+			<span style="float:right;padding-right:15px"><a href="https://download.goodtransit.app" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:blue;text-decoration:none"
+					onMouseOver="this.style.borderBottom='3px solid blue'" onMouseOut="this.style.borderBottom='none'">Download</a></span>
+			<span style="float:right;padding-right:15px"><a href="/whitepaper" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:blue;text-decoration:none" onMouseOver="this.style.borderBottom='3px solid blue'"
+					onMouseOut="this.style.borderBottom='none'">White Paper</a></span>
+			<span style="float:right;padding-right:15px"><a href="/investors" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:blue;text-decoration:none" onMouseOver="this.style.borderBottom='3px solid blue'"
+					onMouseOut="this.style.borderBottom='none'">Investors</a></span>
+			<span style="float:right;padding:5px 15px;background:blue;margin: -5px 15px;border-radius:10px"><span id="countdown" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:white;text-decoration:none"></span></span>
+			<br>
+		</p>
+	</nav>
+
+	<div style="background:blue;height:100vh;margin:0;text-align:center">
+		<h1 style="padding-top:100px;color:white;font-size: 60px;text-align:left;margin-left:40px;margin-right:40px;font-weight:bold;font-family:'Zilla Slab',serif;max-width:800px">GoodTransit is your all-in-one transport partner for city living</h1>
+		<p style="padding-top:20px;color:white;font-size: 40px;text-align:left;margin-left:40px;margin-right:40px;font-weight:bold;font-family:'Zilla Slab',serif;max-width:800px">Releasing in
+			<span id="countdown2"></span>
+		</p>
+		<p style="position:fixed;bottom:40px;left:40px"><a href="https://download.goodtransit.app" style="padding:10px;background:white;font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:blue;text-decoration:none"
+				onMouseOver="this.style.color='white';this.style.background='black'" onMouseOut="this.style.color='blue';this.style.background='white'">join download waitlist</a></p>
+	</div>
+
+	<script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("April 10, 2024 12:00:00").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+			// Get today's date and time
+			var now = new Date().getTime();
+
+			// Find the distance between now and the count down date
+			var distance = countDownDate - now;
+
+			// Time calculations for days, hours, minutes and seconds
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			// Output the result in an element with id="demo"
+			document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
+				minutes + "m " + seconds + "s ";
+
+			// If the count down is over, write some text
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("countdown").innerHTML = "Download Now!";
+			}
+		}, 1000);
+	</script>
+
+	<script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("April 10, 2024 12:00:00").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+			// Get today's date and time
+			var now = new Date().getTime();
+
+			// Find the distance between now and the count down date
+			var distance = countDownDate - now;
+
+			// Time calculations for days, hours, minutes and seconds
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			// Output the result in an element with id="demo"
+			document.getElementById("countdown2").innerHTML = days + "d " + hours + "h " +
+				minutes + "m " + seconds + "s ";
+
+			// If the count down is over, write some text
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("countdown2").innerHTML = "Download Now!";
+			}
+		}, 1000);
+	</script>
+</body>
+
 </html>
