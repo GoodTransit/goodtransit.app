@@ -1,15 +1,18 @@
+<h1>whitepapers</h1>
+
+<h2><a id="current_link">our current whitepaper version is <span id="current_verison"></span></a></h2>
+<p>here is a list of all our whitepaper versions</p>
+
+<ul id="list">
+
+</ul>
+
 <script>
 	const currentWhitepaper = '1.1'
 	const whitepaperFormat = 'html' // pdf, html, or external
 	const externalLink = '' // only if whitepaperFormat == 'external'
 
 	const fullUrl = `/whitepaper/${currentWhitepaper}.${whitepaperFormat}`
-
-	if (whitepaperFormat == 'external') {
-		window.location = externalLink
-	} else {
-		window.location = fullUrl
-	}
 
 	const pastVersions = [{
 			version: '1',
@@ -22,4 +25,23 @@
 			link: ''
 		}
 	]
+
+	document.getElementById('current_link').setAttribute('href', fullUrl)
+	document.getElementById('current_verison').innerHTML = `v${currentWhitepaper}`
+
+	var listHtml = ''
+
+	pastVersions.reverse()
+
+	for (i = 0; i < pastVersions.length; i++) {
+		var url = `/whitepaper/${pastVersions[i].version}.${pastVersions[i].format}`
+
+		if (pastVersions[i].link != '') {
+			url = pastVersions[i].link
+		}
+
+		listHtml = listHtml + `<li><a href="${url}">version ${pastVersions[i].version}</a></li>`
+	}
+
+	document.getElementById('list').innerHTML = listHtml
 </script>
