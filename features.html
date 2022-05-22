@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>GoodTransit App</title>
+
+	<meta name="description" content="GoodTransit is your all-in-one transport partner for city living">
+	<meta name="keywords" content="goodtransit transportation app application transport subway city cities bus ferry">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+	<link rel="canonical" href="http://goodtransit.app/">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&display=swap" rel="stylesheet">
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh
+		}
+
+		.centered {
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+
+		.center_no_height {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.mockup {
+			transition: 0.3s
+		}
+
+		#mockup_holder:hover .mockup {
+			width: 16% !important;
+			position: relative
+		}
+
+		#mockup_holder:hover .mockup:hover {
+			width: 50% !important;
+			position: relative
+		}
+	</style>
+</head>
+
+<body style="margin:0;background:blue;min-height:100vh;background:#fffbd5">
+	<nav style="position:fixed;left:0;top:0;right:0;padding:10px;background:transparent;text-align:center;border-bottom:3px black solid" id="navbar">
+		<p>
+			<span style="float:left;padding-left:15px"><a href="/" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none"><img src="/assets/logogoogo.svg"
+					 style="margin-bottom:20px;height:70%;position:absolute;top:15px;left:10px"></a></span>
+			<span style="float:right;padding-right:15px">
+				<a href="javascript:menu(1)" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" style="font-weight:bold">
+						<path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+						</path>
+					</svg>
+				</a>
+			</span>
+			<br>
+		</p>
+	</nav>
+
+	<menu style="position:fixed;top:0;bottom:0;right:0;width:250px;background-image: linear-gradient(to top, #00f, #fffbd5);margin:0;padding:10px;border-left:3px solid black;overflow:scroll;z-index:1000000" id="menu">
+		<div style="float:right;padding-right:15px;padding-top:15px;">
+			<a href="javascript:menu(0)" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="black">
+					<path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+				</svg>
+			</a>
+		</div><br><br><br><br>
+		<div style="float:right;padding-right:15px"><a href="https://download.goodtransit.app" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none"
+			 onMouseOver="this.style.borderBottom='3px solid black'" onMouseOut="this.style.borderBottom='none'">Download</a></div><br><br>
+		<div style="float:right;padding-right:15px"><a href="/whitepaper/index" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none" onMouseOver="this.style.borderBottom='3px solid black'"
+			 onMouseOut="this.style.borderBottom='none'">White Paper</a></div><br><br>
+		<div style="float:right;padding-right:15px"><a href="/investors" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none" onMouseOver="this.style.borderBottom='3px solid black'"
+			 onMouseOut="this.style.borderBottom='none'">Investors</a></div><br><br><br>
+		<div style="float:right;padding-right:15px"><a target="_blank" href="https://twitter.com/GoodTransit" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none"
+			 onMouseOver="this.style.borderBottom='3px solid black'" onMouseOut="this.style.borderBottom='none'">on Twitter</a></div><br><br>
+		<div style="float:right;padding-right:15px"><a target="_blank" href="https://instagram.com/GoodTransit" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none"
+			 onMouseOver="this.style.borderBottom='3px solid black'" onMouseOut="this.style.borderBottom='none'">on Instagram</a></div><br><br>
+		<div style="float:right;padding-right:15px"><a target="_blank" href="https://dev.goodtransit.app" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none"
+			 onMouseOver="this.style.borderBottom='3px solid black'" onMouseOut="this.style.borderBottom='none'">for Developers</a></div><br><br><br><br><br><br>
+		<div style="float:right;padding-right:15px;position:fixed;bottom:25px;right:25px;"><a style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:#fffbd5;text-decoration:none"><span style="float:right">Releasing
+					in</span><br><span id="countdown"></span></a></div>
+	</menu>
+
+	<div style="min-height:100vh;z-index:1">
+		<div class="centered">
+			<img src="/assets/logogoogo_center.svg" style="width:100%;z-index:1">
+			<h1 style="margin-left:15px;font-family:'Zilla Slab';font-weight:normal;color:black;width:100%;text-align:center;z-index:1">Holy moly! So many features, just look at them!</h1>
+		</div>
+	</div>
+
+	<h1 style="margin-left:25px;font-size:40px;font-family:'Zilla Slab',serif;margin-bottom:0">So Many Features</h1>
+	<div class="row">
+		<div style="float:left;width:50%;padding:10px;">
+			<div class="center_no_height">
+				<div>
+					<ul style="font-family:'Zilla Slab';font-size:x-large;color:black;font-weight:normal">
+						<li>calculate, save, and reuse routes across a city or across the country!</li><br>
+						<li>find locations of rental bikes, scooters, segways, and more</li><br>
+						<li>get live delays and interuptions on tracks and routes.</li><br>
+						<li>see live vehicle positions and capacity in <a href="#live-vehicles" style="text-decoration:none;color:blue;border-bottom:3px solid blue">select cities</a></li><br>
+						<li>receive accurate accessibility information like bikes and wheelchairs</li><br>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div style="float:left;width:50%;padding:10px;">
+			<div class="center_no_height">
+				<div>
+					<ul style="font-family:'Zilla Slab';font-size:x-large;color:black;font-weight:normal">
+						<li>order Ubers, Spin scooters, and transit cards all in the app</li><br>
+						<li>find the best places to eat, shop, and explore at stops</li><br>
+						<li>get up-to-date information about your flights and any delays or schedule changes</li><br>
+						<li>easily route through airports and other transit buildings with interactive maps</li><br>
+						<li>store <a href="#wallet" style="text-decoration:none;color:blue;border-bottom:3px solid blue">select</a> valid state IDs, your US Passport, and transit cards in the wallet feature</li><br>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br>
+
+	<h1 style="margin-left:25px;font-size:40px;font-family:'Zilla Slab',serif;margin-bottom:0">Feature Explanation</h1>
+	<div class="row">
+		<div style="float:left;width:50%;padding:40px;">
+			<div class="center_no_height">
+				<div class="padding:10px">
+					<h2 style="font-size:40px;font-family:'Zilla Slab',serif;margin-bottom:0;text-align:left" id="routes">Routes</h2>
+					<p style="font-family:'Roboto',sans-serif;font-size:18px;text-align:left">Calculate routes across a city or across a country. Select whether money or time is more important to get a more customized route. Routes could include
+						subways, buses, bikes, scooters, Ubers, and more depending on what is being offered at the moment in your city.</p><br>
+					<h2 style="font-size:40px;font-family:'Zilla Slab',serif;margin-bottom:0;text-align:left" id="bikes-scooters-more">Bikes, Scooters, and More</h2>
+					<p style="font-family:'Roboto',sans-serif;font-size:18px;text-align:left">Find the closest rental bikes, scooters, segways, and more are located. Prepay and reserve them in the app if they are the Spin brand.</p><br>
+					<h2 style="font-size:40px;font-family:'Zilla Slab',serif;margin-bottom:0;text-align:left" id="delays-alerts">Delays and Alerts</h2>
+					<p style="font-family:'Roboto',sans-serif;font-size:18px;text-align:left">Get delays and service alerts in the app. Receive updated routes and trips based on these delays and changes.</p><br>
+					<h2 style="font-size:40px;font-family:'Zilla Slab',serif;margin-bottom:0;text-align:left" id="live-vehicles">Live Vehicle Locations</h2>
+					<p style="font-family:'Roboto',sans-serif;font-size:18px;text-align:left">See the live locations of vehicles including subways, buses, trains, and more in select cities.<br><br><b>Supported cities:</b> Boston</p><br>
+					<h2 style="font-size:40px;font-family:'Zilla Slab',serif;margin-bottom:0;text-align:left" id="accessibility">Accessibility Information</h2>
+					<p style="font-family:'Roboto',sans-serif;font-size:18px;text-align:left">Get relative accessibility information including wheelchairs, bikes, ramps and more.</p><br>
+				</div>
+			</div>
+		</div>
+		<div style="float:left;width:50%;padding:40px">
+			<div class="center_no_height">
+				<div class="padding:10px">
+					<h2 style="font-size:40px;font-family:'Zilla Slab',serif;margin-bottom:0;text-align:left" id="order-ubers-spins">Order Ubers and Spins in App</h2>
+					<p style="font-family:'Roboto',sans-serif;font-size:18px;text-align:left">Uber is a ride share platform, in the GoodTransit app you can order Ubers. Spin is a service that offers bikes and scooters in <a href="javascript:alert('
+Akron, OH\n
+Alexandria, VA\n
+Ann Arbor, MI\n
+Arlington, VA\n
+Atlanta, GA\n
+Baltimore, MD\n
+Boise, ID\n
+Charlotte, NC\n
+Chicago, IL\n
+Cleveland, OH\n
+Columbus, OH\n
+Coral Gables, FL\n
+Dayton, OH\n
+Detroit, MI\n
+Durham, NC\n
+El Paso, TX\n
+Fayetteville, AR\n
+Gainesville, FL\n
+Grand Rapids, MI\n
+Jacksonville, FL\n
+Kansas City, MO\n
+King County (White Center), WA\n
+Lexington, KY\n
+Lincoln, NE\n
+Los Angeles, CA\n
+Louisville, KY\n
+Memphis, TN\n
+Miami, FL\n
+Montgomery County, MD\n
+Nashville, TN\n
+Omaha, NE\n
+Orlando, FL\n
+Pittsburgh, PA\n
+Portland, OR\n
+Providence, RI\n
+Raleigh, NC\n
+Salt Lake City, UT\n
+San Diego, CA\n
+San Francisco, CA\n
+San Jose, CA\n
+San Marcos, TX\n
+Santa Monica, CA\n
+Seattle, WA\n
+St. George, UT\n
+Stillwater, OK\n
+Tallahassee, FL\n
+Tampa, FL\n
+Washington, D.C.\n
+West Lafayette, IN\n
+Winston-Salem, NC\n
+(May 21st, 2022)')" style="text-decoration:none;color:blue;border-bottom:3px solid blue">select cities</a> and <a href="javascript:alert('
+Auraria University\n
+Boise State University\n
+Duke University\n
+George Mason University\n
+Michigan State University\n
+Oakland University\n
+Ohio University\n
+Oklahoma State University\n
+Purdue University\n
+Sacramento State University\n
+Texas State University\n
+University of Akron\n
+University of Arkansas\n
+University of California San Diego\n
+University of Central Florida\n
+University of Michigan\n
+University of Nebraska\n
+Vanderbilt University\n
+(May 21st, 2022)')" style="text-decoration:none;color:blue;border-bottom:3px solid blue">universities</a>.</p><br>
+					<h2 style="font-size:40px;font-family:'Zilla Slab',serif;margin-bottom:0;text-align:left" id="eat-shop">Eat and Shop</h2>
+					<p style="font-family:'Roboto',sans-serif;font-size:18px;text-align:left">Get a list of the highest rated locations at each stop and directions to get to them.</p><br>
+					<h2 style="font-size:40px;font-family:'Zilla Slab',serif;margin-bottom:0;text-align:left" id="flights">Flights</h2>
+					<p style="font-family:'Roboto',sans-serif;font-size:18px;text-align:left">Input flight details and get all future updates, delays, and cancellations to your phone.</p><br>
+					<h2 style="font-size:40px;font-family:'Zilla Slab',serif;margin-bottom:0;text-align:left" id="airports-buildings">Airports and Buildings</h2>
+					<p style="font-family:'Roboto',sans-serif;font-size:18px;text-align:left">Airports and buildings can be confusing, access in depth maps and directions through airports and other buildings such as Grand Central Station.</p><br>
+					<h2 style="font-size:40px;font-family:'Zilla Slab',serif;margin-bottom:0;text-align:left" id="wallet">Wallet</h2>
+					<p style="font-family:'Roboto',sans-serif;font-size:18px;text-align:left">Add valid froms of state and federal ID including passports, drivers licenses, and more in the wallet. This information never leaves your phone for
+						security.<br><br><b>Supported states:</b> Louisiana, Oklahoma, Delaware, Arizona, Utah, Iowa, Florida, Maryland, Wyoming, Idaho, California, New York, and DC</p><br>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="background:#050a30" class="row">
+		<div style="float:left;width:25%;padding:10px;">
+			<div class="center_no_height">
+				<div>
+					<ul style="font-family:'Zilla Slab';font-size:large;color:white;font-weight:normal;list-style-type: none;">
+						<br><br><br>
+						<li><a style="font-weight:bolder;font-family: 'Zilla Slab', sans-serif;font-size:30px;text-decoration:none;color:white;">Application</a></li><br>
+						<li><a href="https://download.goodtransit.app" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:16px;text-decoration:none;color:white;" onMouseOver="this.style.borderBottom='2px solid white'"
+							 onMouseOut="this.style.borderBottom='none'">Download</a></li><br>
+						<li><a href="https://dev.goodtransit.app/opensource" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:16px;text-decoration:none;color:white;" onMouseOver="this.style.borderBottom='2px solid white'"
+							 onMouseOut="this.style.borderBottom='none'">Open-Source</a></li><br>
+						<li><a href="/whitepaper/index" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:16px;text-decoration:none;color:white;" onMouseOver="this.style.borderBottom='2px solid white'"
+							 onMouseOut="this.style.borderBottom='none'">White Paper</a></li><br>
+						<br><br><br>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div style="float:left;width:25%;padding:10px;">
+			<div class="center_no_height">
+				<div>
+					<ul style="font-family:'Zilla Slab';font-size:large;color:white;font-weight:normal;list-style-type: none;">
+						<br><br><br>
+						<li><a style="font-weight:bolder;font-family: 'Zilla Slab', sans-serif;font-size:30px;text-decoration:none;color:white;">Company</a></li><br>
+						<li><a href="/investors" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:16px;text-decoration:none;color:white;" onMouseOver="this.style.borderBottom='2px solid white'"
+							 onMouseOut="this.style.borderBottom='none'">Investors</a></li><br>
+						<li><a href="/about" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:16px;text-decoration:none;color:white;" onMouseOver="this.style.borderBottom='2px solid white'"
+							 onMouseOut="this.style.borderBottom='none'">About Us</a></li><br>
+						<li><a href="mailto:hi@goodtransit.app" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:16px;text-decoration:none;color:white;" onMouseOver="this.style.borderBottom='2px solid white'"
+							 onMouseOut="this.style.borderBottom='none'">hi@goodtransit.app</a></li><br>
+						<br><br><br>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div style="float:left;width:25%;padding:10px;">
+			<div class="center_no_height">
+				<div>
+					<ul style="font-family:'Zilla Slab';font-size:large;color:white;font-weight:normal;list-style-type: none;">
+						<br><br><br>
+						<li><a style="font-weight:bolder;font-family: 'Zilla Slab', sans-serif;font-size:30px;text-decoration:none;color:white;">Socials</a></li><br>
+						<li><a target="_blank" href="https://twitter.com/goodtransit" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:16px;text-decoration:none;color:white;" onMouseOver="this.style.borderBottom='2px solid white'"
+							 onMouseOut="this.style.borderBottom='none'">Twitter</a></li><br>
+						<li><a target="_blank" href="https://instagram.com/goodtransit" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:16px;text-decoration:none;color:white;"
+							 onMouseOver="this.style.borderBottom='2px solid white'" onMouseOut="this.style.borderBottom='none'">Instagram</a></li><br>
+						<li><a target="_blank" href="https://github.com/GoodTransit" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:16px;text-decoration:none;color:white;" onMouseOver="this.style.borderBottom='2px solid white'"
+							 onMouseOut="this.style.borderBottom='none'">GitHub</a></li><br>
+						<li><a target="_blank" href="https://www.crunchbase.com/organization/goodtransit" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:16px;text-decoration:none;color:white;"
+							 onMouseOver="this.style.borderBottom='2px solid white'" onMouseOut="this.style.borderBottom='none'">Crunchbase</a></li><br>
+						<li><a target="_blank" href="https://tiktok.com/@goodtransit" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:16px;text-decoration:none;color:white;" onMouseOver="this.style.borderBottom='2px solid white'"
+							 onMouseOut="this.style.borderBottom='none'">TikTok</a></li><br>
+						<br><br><br>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div style="float:left;width:25%;padding:10px;">
+			<div class="center_no_height">
+				<div>
+					<br><br><br><br><br>
+					<img src="/assets/icoonnnn.svg" style="width:100%">
+					<p style="color:white;font-family:'Zilla Slab', serif;text-align:center">&copy; GoodTransit</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// Set the date we're counting down to
+		var countDownDate = new Date(" September 5, 2022 12:00:00")
+			.getTime(); // Update the count down every 1 second var x=setInterval(function() { // Get today's date and time var now=new Date().getTime(); // Find the distance between now and the count
+		down date
+		var distance = countDownDate - now; // Time calculations for days, hours, minutes and seconds var days=Math.floor(distance / (1000 * 60 * 60 * 24)); var hours=Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); var
+		minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000); // Output the result in an element with id="demo" document.getElementById("countdown").innerHTML=days + "d " + hours
+		+
+		"h " + minutes + "m " + seconds + "s "; // If the count down is over, write some text if (distance < 0) { clearInterval(x); document.getElementById("countdown").innerHTML="Download Now!" ; } }, 1000);
+	</script>
+
+	<script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("September 5, 2022 12:00:00").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+			// Get today's date and time
+			var now = new Date().getTime();
+
+			// Find the distance between now and the count down date
+			var distance = countDownDate - now;
+
+			// Time calculations for days, hours, minutes and seconds
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			// Output the result in an element with id="demo"
+			document.getElementById("countdown").innerHTML = days + "d " + hours + "h " +
+				minutes + "m " + seconds + "s ";
+
+			// If the count down is over, write some text
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("countdown").innerHTML = "Download Now!";
+			}
+		}, 1000);
+	</script>
+
+	<script>
+		function blink() {
+			var f = document.getElementById('release');
+			var blinked = true
+			setInterval(function() {
+				if (blinked) {
+					f.style.color = 'white'
+					f.style.background = 'black'
+					blinked = false
+				} else {
+					f.style.color = 'white'
+					f.style.background = 'blue'
+					blinked = true
+				}
+			}, 200);
+		}
+
+		const NAVBAR = document.querySelector('#navbar')
+
+		const getOffset = () => {
+			if (window.pageYOffset > 100) {
+				NAVBAR.style.backgroundColor = 'rgba(255,255,255)'
+				NAVBAR.style.color = 'rgba(255,255,255) !important'
+				NAVBAR.style.transition = 'background .5s ease-out'
+			}
+			if (window.pageYOffset < 100) {
+				NAVBAR.style.backgroundColor = 'rgba(255,255,255, 0)'
+				NAVBAR.style.transition = 'background .5s ease-out'
+			}
+		}
+
+		window.addEventListener('scroll', getOffset)
+
+		const menu = (toggle) => {
+			if (toggle == 0) {
+				document.getElementById("menu").style.display = "none"
+			}
+			if (toggle == 1) {
+				document.getElementById("menu").style.display = "block"
+			}
+		}
+
+		menu(0)
+	</script>
+</body>
+
+</html>
