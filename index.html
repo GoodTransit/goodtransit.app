@@ -59,7 +59,7 @@
 	</style>
 </head>
 
-<body style="margin:0;background:blue;min-height:100vh;background:#fffbd5">
+<body style="margin:0;background:blue;min-height:100vh;background-image:linear-gradient(238deg, rgba(255,251,213,1) 0%, rgba(237,197,255,1) 60%, rgba(173,222,200,1) 100%);">
 	<nav style="position:fixed;left:0;top:0;right:0;padding:10px;background:transparent;text-align:center;border-bottom:3px black solid" id="navbar">
 		<p>
 			<span style="float:left;padding-left:15px"><a style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none"><img src="/assets/logogoogo.svg"
@@ -76,7 +76,9 @@
 		</p>
 	</nav>
 
-	<menu style="position:fixed;top:0;bottom:0;right:0;width:250px;background-image: linear-gradient(to top, #00f, #fffbd5);margin:0;padding:10px;border-left:3px solid black;overflow:scroll;z-index:1000000" id="menu">
+	<menu
+	 style="position:fixed;top:0;bottom:0;right:0;width:250px;background-image: linear-gradient(238deg, rgba(255,251,213,1) 0%, rgba(237,197,255,1) 60%, rgba(173,222,200,1) 100%);margin:0;padding:10px;border-left:3px solid black;overflow:scroll;z-index:10;box-shadow: 0 6px 100px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(0, 0, 0, 0.5);"
+	 id="menu">
 		<div style="float:right;padding-right:15px;padding-top:15px;">
 			<a href="javascript:menu(0)" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="black">
@@ -96,7 +98,7 @@
 			 onMouseOver="this.style.borderBottom='3px solid black'" onMouseOut="this.style.borderBottom='none'">on Instagram</a></div><br><br>
 		<div style="float:right;padding-right:15px"><a target="_blank" href="https://dev.goodtransit.app" style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none"
 			 onMouseOver="this.style.borderBottom='3px solid black'" onMouseOut="this.style.borderBottom='none'">for Developers</a></div><br><br><br><br><br><br>
-		<div style="float:right;padding-right:15px;position:fixed;bottom:25px;right:25px;"><a style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:#fffbd5;text-decoration:none"><span style="float:right">Releasing
+		<div style="float:right;padding-right:15px;position:fixed;bottom:25px;right:25px;"><a style="font-weight:bold;font-family: 'Roboto', sans-serif;font-size:20px;color:black;text-decoration:none"><span style="float:right">Releasing
 					in</span><br><span id="countdown"></span></a></div>
 	</menu>
 
@@ -104,7 +106,8 @@
 		<div style="float:left;width:50%;padding:20px;min-height:100vh">
 			<div class="center">
 				<div>
-					<img src="/assets/logo_gifffff.gif" style="width:100%;border-radius:15px;border:5px solid black"><br>
+					<img src="/assets/logo_gifffff.gif" style="width:100%;border-radius:15px;border:5px solid black;
+  box-shadow: 0 6px 100px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(0, 0, 0, 0.5);"><br>
 					<h2 style="margin-left:15px;font-family:'Zilla Slab';font-weight:normal"> is the leading app for anything transportation and travel related!</h2>
 				</div>
 			</div>
@@ -112,7 +115,7 @@
 		<div style="float:left;width:50%;padding:20px;min-height:100vh">
 			<div class="center">
 				<div>
-					<img src="/assets/mockups/2_phone_1.png" style="width:100%"><br>
+					<img src="/assets/mockups/2_phone_1.png" style="width:100%;filter:drop-shadow(2px 2px 2px gray)"><br>
 				</div>
 			</div>
 		</div>
